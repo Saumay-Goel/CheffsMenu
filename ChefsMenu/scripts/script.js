@@ -24,13 +24,13 @@ const all_days = {
 
         "Lunch": ['Chappati', 'Muttar Masala', 'Bhindi Aloo Bujjiya', 'Veg Pulao', 'Steamed Rice', 'Masala Sambar', 'Tomato Dal', 'Garlic Rasam', 'Pickle', 'Poriyal', 'Butter Milk', 'Fryums'],
 
-        "Snacks": ['Mysore Bonda', 'ChutneyTea / Coffee'],
+        "Snacks": ['Mysore Bonda', 'Chutney', 'Tea / Coffee'],
 
-        "Dinner": ['Chappathi', 'Steamed Rice', 'Dal Tadka', 'Butter Chicken Masala(Non-Veg)',' Paneer Butter Masala/Butter Panneer', 'Rasam', 'Pickle Fryums', 'Veg Salad', 'Milk', 'Banana']
+        "Dinner": ['Chappathi', 'Steamed Rice', 'Dal Tadka', 'Butter Chicken Masala(Non-Veg)',' Paneer Butter Masala / Butter Panneer', 'Rasam', 'Pickle Fryums', 'Veg Salad', 'Milk', 'Banana']
     },
 
     "Thursday": {
-        "Breakfast": ['Bread', 'Butter', 'Jam', 'Millet Idiyappam Chappathi', 'Channa Masala / WhiteKhurma Chutney', 'Tea/Coffee/Milk'],
+        "Breakfast": ['Bread', 'Butter', 'Jam', 'Millet Idiyappam Chappathi', 'Channa Masala / WhiteKhurma', 'Chutney', 'Tea/Coffee/Milk'],
 
         "Lunch": ['Chappathi', 'Aloo Gobi Athiraki', 'Onion Pulao', 'Steamed Rice', 'Punjabi Dal Fry', 'Kadi Pakoda', 'Rasam', 'Pickle', 'Yam Varuval', 'Butter Milk', 'Fryums'],
 
@@ -60,7 +60,7 @@ const all_days = {
     },
 
     "Sunday": {
-        "Breakfast": ['Bread', 'Butter', 'Jam', 'Chole Bhature', 'Chenna Masala', 'Samba RavaUpma', 'Coconut chutney', 'Tea/Coffee/Milk'],
+        "Breakfast": ['Bread', 'Butter', 'Jam', 'Chole Bhature', 'Chenna Masala', 'Samba RavaUpma', 'Coconut chutney', 'Tea / Coffee / Milk'],
 
         "Lunch": ['Chapathi', 'Chicken (Pepper/Kadai)', 'Paneer Butter Masala', 'Dal Dhadka', 'Mint', 'Pulao / Steamed Rice', 'Rasam Pickle', 'Mixed Veg Poriyal', 'Butter Milk', 'Fryums'],
 
