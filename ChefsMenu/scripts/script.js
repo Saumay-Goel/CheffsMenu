@@ -75,44 +75,34 @@ let week_day, day_time, day, time;
 let determine_day = () => {
     if (week_day === 0){
         return 'Sunday';
-
     } else if (week_day === 1){
         return 'Monday';
-
     } else if (week_day === 2){
         return 'Tuesday';
-
     } else if (week_day === 3){
         return 'Wednesday';
-
     } else if (week_day === 4){
         return 'Thursday';
-
     } else if (week_day === 5){
         return 'Friday';
-
     } else if (week_day === 6){
         return 'Saturday';
     }
-}
+};
 
 let determine_time = () => {
     if (day_time >= 0 && day_time < 10){
-        return 'Breakfast';
-
+        return 'Breakfast'; // set to dinner dinner temporarily, it should be breakfast
     } else if (day_time >= 10 && day_time < 14){
         return 'Lunch';
-
     } else if (day_time >= 14 && day_time < 18){
         return 'Snacks';
-
     } else if (day_time >= 18 && day_time < 21){
         return 'Dinner';
-
     } else {
         return 'Dinner';
     }
-}
+};
 
 let determine_initial_day_time = () => {
     let currentdate = new Date();
@@ -134,78 +124,52 @@ let items = '';
 let access_items = all_days[day][time];
 time_day_text.textContent = (`${day} | ${time}`);
 
-function display_list(lists_items){
-    for(let i = 0; i<lists_items.length; i++){
-        items += `<li class="list_items_style">${all_days[`${day}`][`${time}`][i]}</li>`;
+function display_list(list_items){
+    for(let i = 0; i < list_items.length; i++){
+        items += `<li class="list_items_style">${list_items[i]}</li>`;
     }
-    console.log(items);
-    items_list.innerHTML = items; 
+    items_list.innerHTML = items;
     return items;
 }
+
 display_list(access_items);
 
-let change_meals_forward = ()=>{
-    if (day_time >= 0 && day_time < 10){
-        day_time = 11;
-        return 'Lunch'
+const allCombinations = [
+    'Sunday - Breakfast', 'Sunday - Lunch', 'Sunday - Snacks', 'Sunday - Dinner',
+    'Monday - Breakfast', 'Monday - Lunch', 'Monday - Snacks', 'Monday - Dinner',
+    'Tuesday - Breakfast', 'Tuesday - Lunch', 'Tuesday - Snacks', 'Tuesday - Dinner',
+    'Wednesday - Breakfast', 'Wednesday - Lunch', 'Wednesday - Snacks', 'Wednesday - Dinner',
+    'Thursday - Breakfast', 'Thursday - Lunch', 'Thursday - Snacks', 'Thursday - Dinner',
+    'Friday - Breakfast', 'Friday - Lunch', 'Friday - Snacks', 'Friday - Dinner',
+    'Saturday - Breakfast', 'Saturday - Lunch', 'Saturday - Snacks', 'Saturday - Dinner'
+];
 
-    } else if (day_time >= 10 && day_time < 14){
-        day_time = 15;
-        return 'Snacks'
+let currentIndex = 0;
 
-    } else if (day_time >= 14 && day_time < 18){
-        day_time = 19;
-        return 'Dinner'
-
-    } else if (day_time >= 18 && day_time < 21){
-        day_time = 1;
-        return 'Breakfast'
-    } else {
-        day_time = 1;
-        return 'Breakfast'
-    }
-}
-
-let change_meals_backward = ()=>{
-    if (day_time >= 0 && day_time < 10){
-        day_time = 11;
-        return 'Dinner'
-
-    } else if (day_time >= 10 && day_time < 14){
-        day_time = 15;
-        return 'Snacks'
-
-    } else if (day_time >= 14 && day_time < 18){
-        day_time = 19;
-        return 'Lunch'
-
-    } else if (day_time >= 18 && day_time < 24){
-        day_time = 1;
-        return 'Breakfast'
-    }
-}
-
-forward.addEventListener("click",()=>{
-    if (time === 'Dinner') {
-        week_day = (week_day + 1) % 7;
-    }
-
-    day = determine_day();
-    time = change_meals_forward();
-    time_day_text.textContent = (`${day} | ${time}`);
+function renderchanges() {
+    const currentCombination = allCombinations[currentIndex];
+    const [currentDay, currentTime] = currentCombination.split(' - ');
+    time_day_text.textContent = `${currentDay} | ${currentTime}`;
     items = '';
-    access_items = all_days[day][time];
+    access_items = all_days[currentDay][currentTime];
     display_list(access_items);
+}
+
+function find_current_index(){
+    for (let i = 0; i <= allCombinations.length; i++){
+        if (allCombinations[i] == `${day} - ${time}`){
+            currentIndex += i 
+        }
+    }
+}
+find_current_index()
+
+forward.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % allCombinations.length;
+    renderchanges();
 });
 
-backward.addEventListener("click", () => {
-    if (time === 'Breakfast') {
-        week_day = (week_day - 1 + 7) % 7;
-    }
-    day = determine_day();
-    time = change_meals_backward();
-    time_day_text.textContent = (`${day} | ${time}`);
-    items = '';
-    access_items = all_days[day][time];
-    display_list(access_items);
+backward.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + allCombinations.length) % allCombinations.length;
+    renderchanges();
 });
