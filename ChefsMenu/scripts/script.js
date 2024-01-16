@@ -70,35 +70,28 @@ const all_days = {
     }
 }
 
-var currentdate = new Date();
-let week_day = currentdate.getDay();
-var day_time = currentdate.getHours();
-
-let time_day_text = document.querySelector('.time_day_text');
-let items_list = document.querySelector('.items_list');
-let forward = document.getElementById('forward');
-let backward = document.getElementById('backward');
+let week_day, day_time, day, time;
 
 let determine_day = () => {
     if (week_day === 0){
         return 'Sunday';
 
-    }else if (week_day === 1){
+    } else if (week_day === 1){
         return 'Monday';
 
-    }else if (week_day === 2){
+    } else if (week_day === 2){
         return 'Tuesday';
 
-    }else if (week_day === 3){
+    } else if (week_day === 3){
         return 'Wednesday';
 
-    }else if (week_day === 4){
+    } else if (week_day === 4){
         return 'Thursday';
 
-    }else if (week_day === 5){
+    } else if (week_day === 5){
         return 'Friday';
 
-    }else if (week_day === 6){
+    } else if (week_day === 6){
         return 'Saturday';
     }
 }
@@ -107,54 +100,86 @@ let determine_time = () => {
     if (day_time >= 0 && day_time < 10){
         return 'Breakfast';
 
-    }else if (day_time>= 10 && day_time <14){
+    } else if (day_time >= 10 && day_time < 14){
         return 'Lunch';
 
-    }else if (day_time >= 14 && day_time < 18){
+    } else if (day_time >= 14 && day_time < 18){
         return 'Snacks';
 
-    }else if (day_time >= 18 && day_time < 21){
+    } else if (day_time >= 18 && day_time < 21){
         return 'Dinner';
 
-    }else{
+    } else {
         return 'Dinner';
     }
 }
 
-let day = determine_day()
-let time = determine_time()
+let determine_initial_day_time = () => {
+    let currentdate = new Date();
+    week_day = currentdate.getDay();
+    day_time = currentdate.getHours();
+    day = determine_day();
+    time = determine_time();
+};
+
+// Call the function to determine initial day and time
+determine_initial_day_time();
+
+let time_day_text = document.querySelector('.time_day_text');
+let items_list = document.querySelector('.items_list');
+let forward = document.getElementById('forward');
+let backward = document.getElementById('backward');
 
 let items = '';
-let access_items = all_days[day][time]
-time_day_text.textContent = (`${day} - (${time})`)
+let access_items = all_days[day][time];
+time_day_text.textContent = (`${day} | ${time}`);
 
 function display_list(lists_items){
     for(let i = 0; i<lists_items.length; i++){
-        items += `<li class="list_items_style">${all_days[`${day}`][`${time}`][i]}</li>`
+        items += `<li class="list_items_style">${all_days[`${day}`][`${time}`][i]}</li>`;
     }
-    console.log(items)
+    console.log(items);
     items_list.innerHTML = items; 
-    return items
+    return items;
 }
 display_list(access_items);
 
-let change_meals = ()=>{
+let change_meals_forward = ()=>{
     if (day_time >= 0 && day_time < 10){
         day_time = 11;
         return 'Lunch'
 
-    }else if (day_time>= 10 && day_time <14){
+    } else if (day_time >= 10 && day_time < 14){
         day_time = 15;
         return 'Snacks'
 
-    }else if (day_time >= 14 && day_time < 18){
+    } else if (day_time >= 14 && day_time < 18){
         day_time = 19;
         return 'Dinner'
 
-    }else if (day_time >= 18 && day_time < 21){
+    } else if (day_time >= 18 && day_time < 21){
         day_time = 1;
         return 'Breakfast'
-    }else{
+    } else {
+        day_time = 1;
+        return 'Breakfast'
+    }
+}
+
+let change_meals_backward = ()=>{
+    if (day_time >= 0 && day_time < 10){
+        day_time = 11;
+        return 'Dinner'
+
+    } else if (day_time >= 10 && day_time < 14){
+        day_time = 15;
+        return 'Snacks'
+
+    } else if (day_time >= 14 && day_time < 18){
+        day_time = 19;
+        return 'Lunch'
+
+    } else if (day_time >= 18 && day_time < 24){
         day_time = 1;
         return 'Breakfast'
     }
@@ -164,9 +189,10 @@ forward.addEventListener("click",()=>{
     if (time === 'Dinner') {
         week_day = (week_day + 1) % 7;
     }
+
     day = determine_day();
-    time = change_meals();
-    time_day_text.textContent = (`${day} - (${time})`);
+    time = change_meals_forward();
+    time_day_text.textContent = (`${day} | ${time}`);
     items = '';
     access_items = all_days[day][time];
     display_list(access_items);
@@ -177,8 +203,8 @@ backward.addEventListener("click", () => {
         week_day = (week_day - 1 + 7) % 7;
     }
     day = determine_day();
-    time = change_meals();
-    time_day_text.textContent = (`${day} - (${time})`);
+    time = change_meals_backward();
+    time_day_text.textContent = (`${day} | ${time}`);
     items = '';
     access_items = all_days[day][time];
     display_list(access_items);
