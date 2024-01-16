@@ -54,7 +54,7 @@ const all_days = {
 
         "Lunch": ['Poori', 'White Peas Curry', 'AlooThindeli', 'Kashmiri Pulao', 'Steamed Rice', 'Dal Fry', 'KaraKozhambu', 'Kootu(Cabbage)', 'Rasam', 'Pickle', 'Butter Milk', 'Fryums'],
 
-        "Snacks": ['Cake or Brownie, 'Tea / Coffee'],
+        "Snacks": ['Cake or Brownie', 'Tea / Coffee'],
 
         "Dinner": ['Panjabi Parantha', 'Potato Fry', 'Steamed Rice', 'Veg jhal Pyaza', 'bagara Dal', 'Idly', 'Idly Podi', 'Oil', 'Chutney', 'Kathamba Sambar', 'Rasam', 'Pickle Fryums', 'Veg Salad', 'Milk', 'Banana', 'Chicken']
     },
