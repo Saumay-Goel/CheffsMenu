@@ -16,7 +16,7 @@ const all_days = {
 
         "Snacks": ['Mysore Bonda', 'Chutney', 'Tea / Coffee'],
 
-        "Dinner": ['Panjabi Paratha', 'Black Chenna', 'Steamed Rice', 'Dal Fry', 'Veg/ Chilly Gobi Dry', 'Milet Dosa', 'Idly Podi', 'oil', 'Sambar', 'Pepper Rasam', 'Pickle Fryums', 'Ved Salad', 'Milk, Special Fruits', 'Mutton Gravy'],
+        "Dinner": ['Panjabi Paratha', 'Black Chenna', 'Steamed Rice', 'Dal Fry', 'Veg/ Chilly Gobi Dry', 'Milet Dosa', 'Idly Podi', 'oil', 'Sambar', 'Pepper Rasam', 'Fryums', 'Veg Salad', 'Milk', 'Special Fruits', 'Mutton Gravy'],
     },
 
     "Wednesday": {
