@@ -16,11 +16,11 @@ const all_days = {
 
         "Snacks": ['Mysore Bonda', 'Chutney', 'Tea / Coffee'],
 
-        "Dinner": ['Panjabi Paratha', 'Black Chenna', 'Steamed Rice', 'Dal Fry', 'Veg/ Chilly Gobi Dry', 'Milet Dosa', 'Idly Podi', 'oil', 'Sambar', 'Pepper Rasam', 'Fryums', 'Veg Salad', 'Milk', 'Special Fruits', 'Mutton Gravy'],
+        "Dinner": ['Panjabi Paratha', 'Black Chenna', 'Steamed Rice', 'Dal Fry', 'Veg/ Chilly Gobi Dry', 'Milet Dosa', 'Idly Podi', 'Sambar', 'Pepper Rasam', 'Fryums', 'Veg Salad', 'Milk', 'Special Fruits', 'Mutton Gravy'],
     },
 
     "Wednesday": {
-        "Breakfast": ['Bread', 'Butter', 'Jam', 'Millet Idly', 'IdlyPodi', 'Oil', 'Sambar', 'Chutney', 'Poha', 'Mint Chutney', 'Tea/Coffee/ Milk', 'Masala Omelet'],
+        "Breakfast": ['Bread', 'Butter', 'Jam', 'Millet Idly', 'IdlyPodi', 'Sambar', 'Chutney', 'Poha', 'Mint Chutney', 'Tea/Coffee/ Milk', 'Masala Omelet'],
 
         "Lunch": ['Chappati', 'Muttar Masala', 'Bhindi Aloo Bujjiya', 'Veg Pulao', 'Steamed Rice', 'Masala Sambar', 'Tomato Dal', 'Garlic Rasam', 'Pickle', 'Poriyal', 'Butter Milk', 'Fryums'],
 
@@ -36,11 +36,11 @@ const all_days = {
 
         "Snacks": ['Pani Poori (or) Chenna', 'Sundal', 'Tea / Coffee'],
 
-        "Dinner": ['Millet Sweet (or) Kasari', 'Chole Pattora', 'Chole Masala', 'Steamed Rice', 'Tomato Dal', 'Idly', 'Sambar', 'Coconut chutney', 'Idly Podi', 'Oil', 'Rasam', 'Pickle Fryums', 'Veg Salad', 'Milk', 'Banana','Mutton Gravy']
+        "Dinner": ['Millet Sweet (or) Kasari', 'Chole Pattora', 'Chole Masala', 'Steamed Rice', 'Tomato Dal', 'Idly', 'Sambar', 'Coconut chutney', 'Idly Podi', 'Rasam', 'Pickle Fryums', 'Veg Salad', 'Milk', 'Banana', 'Mutton Gravy']
     },
 
     "Friday": {
-        "Breakfast": ['Bread', 'Butter', 'Jam', 'Chappathi', 'Rajma Masala', 'Dosa', 'Idly Podi', 'Oil', 'Sambar', 'Coconut Chutney / Tomato Chutney', 'Tea/Coffee / Milk'],
+        "Breakfast": ['Bread', 'Butter', 'Jam', 'Chappathi', 'Rajma Masala', 'Dosa', 'Idly Podi', 'Sambar', 'Coconut Chutney / Tomato Chutney', 'Tea/Coffee / Milk'],
 
         "Lunch": ['Dry Jamun / Bread Halwa', 'Capscum Gobi Curry', 'Dal Tadka', 'Veg Briyani', 'Mix Raihta', 'Bisibelabath Rice', 'Curd Rice', 'Steamed Rice', 'Tomato Rasam', 'Pickle', 'Fryums'],
 
@@ -56,7 +56,7 @@ const all_days = {
 
         "Snacks": ['Cake or Brownie', 'Tea / Coffee'],
 
-        "Dinner": ['Panjabi Parantha', 'Potato Fry', 'Steamed Rice', 'Veg jhal Pyaza', 'bagara Dal', 'Idly', 'Idly Podi', 'Oil', 'Chutney', 'Kathamba Sambar', 'Rasam', 'Pickle Fryums', 'Veg Salad', 'Milk', 'Banana', 'Chicken']
+        "Dinner": ['Panjabi Parantha', 'Potato Fry', 'Steamed Rice', 'Veg jhal Pyaza', 'bagara Dal', 'Idly', 'Idly Podi', 'Chutney', 'Kathamba Sambar', 'Rasam', 'Pickle Fryums', 'Veg Salad', 'Milk', 'Banana', 'Chicken']
     },
 
     "Sunday": {
