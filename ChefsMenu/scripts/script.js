@@ -62,7 +62,7 @@ const all_days = {
     "Sunday": {
         "Breakfast": ['Bread', 'Butter', 'Jam', 'Chole Bhature', 'Chenna Masala', 'Samba RavaUpma', 'Coconut chutney', 'Tea / Coffee / Milk'],
 
-        "Lunch": ['Chapathi', 'Chicken (Pepper/Kadai)', 'Paneer Butter Masala', 'Dal Dhadka', 'Mint', 'Pulao / Steamed Rice', 'Rasam Pickle', 'Mixed Veg Poriyal', 'Butter Milk', 'Fryums'],
+        "Lunch": ['Chapathi', 'Chicken (Pepper/Kadai)', 'Paneer Butter Masala', 'Dal Dhadka', 'Mint Pulao / Steamed Rice', 'Rasam Pickle', 'Mixed Veg Poriyal', 'Butter Milk', 'Fryums'],
 
         "Snacks": ['Corn/ Bajji With Chutney', 'Tea/Coffee'],
 
